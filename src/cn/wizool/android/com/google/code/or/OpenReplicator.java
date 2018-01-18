@@ -63,7 +63,7 @@ public class OpenReplicator {
 	protected BinlogParser binlogParser;
 	protected BinlogEventListener binlogEventListener;
 	protected final AtomicBoolean running = new AtomicBoolean(false);
-	private volatile boolean autoRestart = true;
+//	private volatile boolean autoRestart = true;
 	
 	/**
 	 * 
@@ -110,14 +110,14 @@ public class OpenReplicator {
 	
 	public void stopQuietly(long timeout, TimeUnit unit) {
 		 stopQuietly(timeout, unit);
-	        if(autoRestart){
+	       /* if(autoRestart){
 	            try {
 	                TimeUnit.SECONDS.sleep(10);
 	                logger.error("Restart OpenReplicator");
 	            } catch (InterruptedException e) {
 	                e.printStackTrace();
 	            }
-	        }
+	        }*/
 	}
 	
 	/**
