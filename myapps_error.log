@@ -16225,4 +16225,6 @@
  - [ binlog-parser-1:166686 ]18:00:52,446  WARN InstanceListener:220 - can not find table name from sql:begin
  - [ binlog-parser-1:166690 ]18:01:08,481  WARN InstanceListener:220 - can not find table name from sql:begin
  - [ binlog-parser-1:182725 ]18:01:38,491  WARN InstanceListener:220 - can not find table name from sql:begin
- - [ binlog-parser-1:212735 ]
+ - [ binlog-parser-1:212735 ]18:02:08,510  WARN InstanceListener:220 - can not find table name from sql:begin
+ - [ binlog-parser-1:242754 ]18:02:38,518  WARN InstanceListener:220 - can not find table name from sql:begin
+ - [ binlog-parser-1:272762 ]
