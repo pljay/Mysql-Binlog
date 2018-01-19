@@ -60,14 +60,13 @@ public class OpenReplicatorTest {
 		@Override
 		public void run() {
 			while(true){
-
+				Gson gson = new GsonBuilder().serializeNulls().create();
 				if(CDCEventManager.queue.isEmpty() == false)
 				{
 					Connection connection = MysqlConnection.setConnection("root", "poiuyt");
 					CDCEvent ce = CDCEventManager.queue.pollFirst();
-					Gson gson = new GsonBuilder().serializeNulls().create();
-					String after = gson.toJson(ce.getBefore());
-					String before = gson.toJson(ce.getAfter());
+					String  before= gson.toJson(ce.getBefore());
+					String  after= gson.toJson(ce.getAfter());
 					logger.info(after);
 					if ((!ce.getTableName().split("_")[0].equals("auth")) && (ce.getIsDdl().equals(Boolean.valueOf(false))) && (!ce.getTableName().equals("tlk_安卓设备管理")) && (!ce.getTableName().equals("t_设备管理")) && (!ce.getTableName().equals("binlog")) && (!ce.getTableName().equals("attendance")))
 					{
